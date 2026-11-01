@@ -2,7 +2,7 @@
 
 An AI research assistant powered by **multi-agent workflows, RAG, memory, and tools**. The system uses **LangGraph** to dynamically route research tasks to specialized agents for web research, paper analysis, Python execution, and evaluation.
 
-![Multi-Agent AI Research Assistant Architecture](docs/readme_architecture.png)
+![Multi-Agent AI Research Assistant Architecture](docs/readme_architecture.svg)
 
 ---
 
@@ -177,56 +177,6 @@ It can evaluate:
 
 The evaluation results are then used by the final reporting stage.
 
----
-
-# System Architecture
-
-The main components of the system are:
-
-```text
-                         ┌─────────────────────┐
-                         │        User         │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │    Orchestrator     │
-                         │   Dynamic Routing   │
-                         └──────────┬──────────┘
-                                    │
-                    ┌───────────────┼───────────────┐
-                    │               │               │
-                    ▼               ▼               ▼
-             ┌────────────┐  ┌────────────┐  ┌────────────┐
-             │  Research  │  │   Paper    │  │   Coding   │
-             │   Agent    │  │   Agent    │  │   Agent    │
-             └─────┬──────┘  └─────┬──────┘  └─────┬──────┘
-                   │               │               │
-                   ▼               ▼               ▼
-              Web Search       PDF / RAG      Python Sandbox
-                                                   │
-                                                   ▼
-                                            Human Approval
-                    │               │               │
-                    └───────────────┼───────────────┘
-                                    ▼
-                         ┌─────────────────────┐
-                         │   Evaluation Agent  │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │    Final Report     │
-                         └─────────────────────┘
-
-       ┌──────────────────┐          ┌──────────────────┐
-       │ SQLite Checkpoint│          │ PostgreSQL Memory│
-       └──────────────────┘          └──────────────────┘
-```
-
-The graphical version of this architecture is included at the beginning of this README.
-
----
 
 # Agent Responsibilities
 
