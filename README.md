@@ -297,7 +297,7 @@ Before running the project, install:
 
 ```bash
 git clone <your-repository-url>
-cd multi_agent_research_assistant_v2
+cd Multi_Agent_AI_Research_Assistant_v2
 ```
 
 ---
