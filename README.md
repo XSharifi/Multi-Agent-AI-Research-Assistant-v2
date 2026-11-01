@@ -2,7 +2,7 @@
 
 An AI research assistant powered by **multi-agent workflows, RAG, memory, and tools**. The system uses **LangGraph** to dynamically route research tasks to specialized agents for web research, paper analysis, Python execution, and evaluation.
 
-![Multi-Agent AI Research Assistant Architecture](docs/readme_architecture.svg)
+![Multi-Agent AI Research Assistant Architecture](docs/Multi-Agent AI Research Assistant Architecture.svg)
 
 ---
 
